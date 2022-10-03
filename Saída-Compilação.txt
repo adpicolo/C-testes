@@ -1,0 +1,5 @@
+﻿Compilação iniciada...
+1>------ Compilação iniciada: Projeto: frases2csharp, Configuração: Debug Any CPU ------
+1>Ignorando analisadores para acelerar a construção. Você pode executar o comando 'Build' ou 'Rebuild' para executar os analisadores.
+1>frases2csharp -> C:\Users\Policial\source\repos\frases2csharp\bin\Debug\net6.0\frases2csharp.dll
+========== Compilação: 1 bem-sucedida, 0 com falha, 0 atualizada, 0 ignorada ==========
