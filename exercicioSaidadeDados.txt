@@ -1,5 +1,0 @@
-﻿Compilação iniciada...
-1>------ Compilação iniciada: Projeto: exercicioSaidadeDados, Configuração: Debug Any CPU ------
-1>Ignorando analisadores para acelerar a construção. Você pode executar o comando 'Build' ou 'Rebuild' para executar os analisadores.
-1>exercicioSaidadeDados -> C:\Users\Policial\Desktop\C# teste\exercicioSaidadeDados\bin\Debug\net6.0\exercicioSaidadeDados.dll
-========== Compilação: 1 bem-sucedida, 0 com falha, 0 atualizada, 0 ignorada ==========
