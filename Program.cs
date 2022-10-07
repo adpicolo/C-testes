@@ -1,23 +1,46 @@
-﻿
-//IMPRIMIR SAÍDA DE DADOS Csharp
-
-
+﻿using System.Globalization;
 internal class Program
 {
     private static void Main(string[] args)
     {
-        
+        string produto1 = "computador";
+        string produto2 = "mesa de escritorio";
+
+        byte idade = 30;
+        int codigo = 5290;
+        char genero = 'M';
+
+        double preco1 = 2100.0;
+        double preco2 = 650.50;
+        double medida = 53.234567;
+
+        Console.WriteLine("Produtos: ");
+        Console.WriteLine(produto1 + " cujo o preço é: " + preco1);
+      
+        Console.WriteLine(produto2 + " cujo preço é " + preco2);
+
+        Console.WriteLine("Registro: ");
+        Console.WriteLine(idade + "anos de idade, código " + codigo + " gênero " + genero);
+
+        Console.WriteLine("Medida com oito casas decimais: " + medida);
+        Console.WriteLine("arredondando (tres casas decimais): {0:F3}", medida);
+        Console.WriteLine("Separador decimal invariant culture: " + medida.ToString("F3", CultureInfo.InvariantCulture));
+
+
+        Console.WriteLine("-------------------------------------------------------");
+        Console.WriteLine("Produtos: ");
+        Console.WriteLine("{0} cujo preço é $ {1:F2} ", produto1, preco1);
+        Console.WriteLine("{0} cujo preço é $ {1:F2} ", produto2, preco2);
+        Console.WriteLine("Registro: {0} anos de idade, código {1} e gênero {2} ", idade, codigo, genero);
+        Console.WriteLine("Medida com oito casas decimais: {0:F8}", medida);
+        Console.WriteLine("Arredondando três casas decimais: {0:F3} ", medida);
+        Console.WriteLine("Separador decimal inavriant Culture: " + medida.ToString("F3", CultureInfo.InvariantCulture));
+
+    
+
+
+
 
         
-        int idade = 31;
-        double saldo = 10.35784;
-        string nome = "Maria"; 
-
-        Console.WriteLine("{0} tem {1} anos e tem saldo igual a {2:F} reais", nome, idade, saldo); // técnica Placeholders; iniciar contar do zero e colocar entre as chaves; 
-
-        Console.WriteLine($"{nome} tem {idade} anos e tem saldo igual a {saldo:F2} reais");//tecnica interpolação; 
-
-        Console.WriteLine(nome + " tem " +  idade + "anos e tem saldo igual a " + saldo.ToString("F2") + " reais");//concondenação de strings - junção de varias partes; 
-
     }
 }
