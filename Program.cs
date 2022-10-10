@@ -1,33 +1,22 @@
-﻿using System.Threading.Channels;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
-        string frase = Console.ReadLine();
-        //abre o terminal para receber a informação do usuário; 
-        string x = Console.ReadLine();
-        string y = Console.ReadLine();
-        string z = Console.ReadLine();
-
-        //comando Split - vetor; abre espaço entre parenteses para colocar palvaras na mesma linha;
+       /*Fazer um programa para LER quatro valores inteiros A, B, C e D. A seguir, 
+       calcule e mostre a diferença do produto de A e B pelo produto de C e D
+       segundo a fórmula: DIFERENCA = (A * B - C * D)*/
         
-        string[] v = Console.ReadLine().Split(' ');
-        string a = v[0];
-        string b = v[1];
-        string c = v[2]; 
+       int A, B, C, D, diferenca; 
+       A = int.Parse(Console.ReadLine());
+       B = int.Parse(Console.ReadLine());
+       C = int.Parse(Console.ReadLine());
+       D = int.Parse(Console.ReadLine()); 
 
-        Console.WriteLine("voce digitou: " + frase);
-        Console.WriteLine(x);
-        Console.WriteLine(y);
-        Console.WriteLine(z);
-        Console.WriteLine(a);
-        Console.WriteLine(b);
-        Console.WriteLine(c);
+        diferenca = A * B - C * D;
+
+        Console.WriteLine("Diferença = "+ diferenca);
 
 
-
-
-
+        
     }
 }
