@@ -1,29 +1,28 @@
-﻿internal class Program
+﻿using System.Runtime.Serialization;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-        //tabela verdade -e xemplos
+        //Exercício 1:
+        //Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma
+        // mensagem explicativa.
 
-        bool c1 = 2 > 3 && 4 != 5; // como 2 não é maior do q 3 e precisaria de mambos para ser verdadeira, dará falso;
-        //condição && (E) será verdadeira somente quando ambas forem V;
 
-        Console.WriteLine(c1);
+        int numero1 = 10;
+        int numero2 = 30;
+        int soma = 0;
 
-        //na condição OU || - ao menos uma tem que ser V;
-        bool c2 = 2 > 3 || 4 != 5; // TRUE
-        Console.WriteLine(c2); //pelo menos uma das duas~é V então, o resultado sera verdadeiro; ! significa NÃO; 
+        soma = numero1 + numero2;
+        Console.WriteLine(" A soma dos valores 10 + 30 é: " + soma);
 
-        bool c3 = !(2 > 3) && 4 != 5; //! negao resultado, inverte; /TRUE por conta da negação !; 
-        Console.WriteLine(c3);
-        Console.WriteLine("------------------------------");
+        int numero3 = -30;
+        int numero4 = 10;
 
-        bool c4 = 10 < 5;
+        soma = numero3 + numero4;
+        Console.WriteLine(" A soma dos valores -30 + 10 é: " + soma);
 
-        bool c5 = c1 || c2 && c3;
-        Console.WriteLine(c5);
-        // C2 EE C3 = Precede = V + V = V;
-        //C1 é falso + V DO c2 E c3 = V; pois OU exige que somente uma seja V; 
-        
+
 
 
 
