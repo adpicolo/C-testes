@@ -1,22 +1,36 @@
-﻿internal class Program
+﻿using System; 
+using System.Globalization;
+using System.Runtime.Serialization;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
-       /*Fazer um programa para LER quatro valores inteiros A, B, C e D. A seguir, 
-       calcule e mostre a diferença do produto de A e B pelo produto de C e D
-       segundo a fórmula: DIFERENCA = (A * B - C * D)*/
-        
-       int A, B, C, D, diferenca; 
-       A = int.Parse(Console.ReadLine());
-       B = int.Parse(Console.ReadLine());
-       C = int.Parse(Console.ReadLine());
-       D = int.Parse(Console.ReadLine()); 
+        /*Fazer um programa que leia o número de um funcionário, seu número de horas trabalhadas, 
+        o valor que recebe por hora e calcula o salário desse funcionário. A seguir, mostre o número 
+        e o salário do funcionário, com duas casas decimais.*/
 
-        diferenca = A * B - C * D;
+        int numero, horas;
+        double valorHora, salario;
 
-        Console.WriteLine("Diferença = "+ diferenca);
+        numero = int.Parse(Console.ReadLine());
+        horas = int.Parse(Console.ReadLine());
+        valorHora = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+
+        salario = valorHora * horas;
+
+        Console.WriteLine("NUMBER = " + numero);
+        Console.WriteLine("SALARY = U$ " + salario.ToString("F2", CultureInfo.InvariantCulture));
+        //To.String....serve para colocar pontos ao invez de virgulas nas casas decimais; 
 
 
-        
+
+
+
+
+
+
+
+
     }
 }
