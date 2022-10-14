@@ -1,30 +1,40 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Drawing;
+using System.Globalization;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        //Exercício 1:
-        //Faça um programa para ler dois valores inteiros, e depois mostrar na tela a soma desses números com uma
-        // mensagem explicativa.
+        //Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A
+        //seguir, calcule e mostre o valor da conta a pagar.
 
+        string[] valores = Console.ReadLine().Split(' ');
+        int codigo = int.Parse(valores[0]);
+        int quantidade = int.Parse(valores[1]);
 
-        int numero1 = 10;
-        int numero2 = 30;
-        int soma = 0;
+        double total;
+        if (codigo == 1)
+        {
+            total = quantidade * 4.0;
+        }
+        else if (codigo == 2)
+        {
+            total = quantidade * 4.5;
 
-        soma = numero1 + numero2;
-        Console.WriteLine(" A soma dos valores 10 + 30 é: " + soma);
-
-        int numero3 = -30;
-        int numero4 = 10;
-
-        soma = numero3 + numero4;
-        Console.WriteLine(" A soma dos valores -30 + 10 é: " + soma);
-
-
-
-
+        }
+        else if (codigo == 3)
+        {
+            total = quantidade * 5.0;
+        }
+        else if(codigo == 4)
+        {
+            total = quantidade * 2.0;
+        }
+        else
+        {
+            total = quantidade * 1.5;
+        }
+        Console.WriteLine("Total: R$ " + total.ToString("F2", CultureInfo.InvariantCulture)); 
 
     }
 }
