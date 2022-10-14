@@ -1,40 +1,29 @@
-﻿using System.Drawing;
-using System.Globalization;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
-        //Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A
-        //seguir, calcule e mostre o valor da conta a pagar.
+        //Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração do jogo, sabendo que o mesmo pode
+        //começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas.
 
         string[] valores = Console.ReadLine().Split(' ');
-        int codigo = int.Parse(valores[0]);
-        int quantidade = int.Parse(valores[1]);
+        int horaInicial = int.Parse(valores[0]);
+        int horaFinal = int.Parse(valores[1]);
 
-        double total;
-        if (codigo == 1)
+        int duracao;
+        if (horaInicial < horaFinal)
         {
-            total = quantidade * 4.0;
-        }
-        else if (codigo == 2)
-        {
-            total = quantidade * 4.5;
-
-        }
-        else if (codigo == 3)
-        {
-            total = quantidade * 5.0;
-        }
-        else if(codigo == 4)
-        {
-            total = quantidade * 2.0;
+            duracao = horaFinal - horaInicial;
         }
         else
         {
-            total = quantidade * 1.5;
+            duracao = 24 - horaInicial + horaInicial;
+
         }
-        Console.WriteLine("Total: R$ " + total.ToString("F2", CultureInfo.InvariantCulture)); 
+        Console.WriteLine("o jogo durou: " + duracao + "horas(S)");
 
     }
+
+
+
 }
+   
