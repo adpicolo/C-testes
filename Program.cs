@@ -2,28 +2,34 @@
 {
     private static void Main(string[] args)
     {
-        //Leia a hora inicial e a hora final de um jogo. A seguir calcule a duração do jogo, sabendo que o mesmo pode
-        //começar em um dia e terminar em outro, tendo uma duração mínima de 1 hora e máxima de 24 horas.
+        Console.WriteLine("Digite 03 numeros: ");
+        int n1 = int.Parse(Console.ReadLine());
+        int n2 = int.Parse(Console.ReadLine()); 
+        int n3 = int.Parse(Console.ReadLine());
 
-        string[] valores = Console.ReadLine().Split(' ');
-        int horaInicial = int.Parse(valores[0]);
-        int horaFinal = int.Parse(valores[1]);
 
-        int duracao;
-        if (horaInicial < horaFinal)
+        double resultado = maior(n1, n2, n3);
+
+        Console.WriteLine("Maior = " + resultado);
+        
+    }
+    //outra função, outro escopo; 
+        static  int maior(int a, int b, int c)
+    {
+        int m; 
+        if (a > b && a > c)
         {
-            duracao = horaFinal - horaInicial;
+            m = a;
+        }
+         else if (b > c)
+        {
+            m = b; 
         }
         else
         {
-            duracao = 24 - horaInicial + horaInicial;
-
+            m = c; 
         }
-        Console.WriteLine("o jogo durou: " + duracao + "horas(S)");
-
+        return m; 
     }
 
-
-
 }
-   
