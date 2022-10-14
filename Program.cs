@@ -1,27 +1,24 @@
-﻿using System.Globalization;
-using System.Security.Cryptography.X509Certificates;
-
-internal class Program
+﻿internal class Program
 {
     private static void Main(string[] args)
     {
-        //A estrutura se repete enquanto a condição for Verdadeira; 
-        //V - executa e volta; F - pula fora; parece o If;
+        //estrutura for/para
+        // for(inicio; condição; incremento){ comandos}
+        // costuma ser utilizada quando sabe a quantidade de reptições; se for ocntagem;
+        //caso contrário, utiliza while; 
 
-        
-        Console.Write("digite um numero: ");
-        double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-        while (x >= 0.0)
+        Console.Write("quantos numeros inteiros voce vai digitar: ");
+        int n = int.Parse(Console.ReadLine());
+        int soma = 0;
+
+        for(int i =1; i <=n; i++)
         {
-
-            double raiz = Math.Sqrt(x);
-            Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
-            Console.WriteLine("digite outro numero ");
-            x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Console.Write("valor #{0}: ", i);
+            int valor = int.Parse(Console.ReadLine());
+            soma += valor; 
         }
 
-        Console.WriteLine("numero negativo");
-
+        Console.WriteLine("soma = " + soma);
     }
 }
