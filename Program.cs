@@ -1,40 +1,27 @@
-﻿internal class Program
+﻿using System.Globalization;
+using System.Security.Cryptography.X509Certificates;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
+        //A estrutura se repete enquanto a condição for Verdadeira; 
+        //V - executa e volta; F - pula fora; parece o If;
 
-        //Break Point - ponto no programa a partir do qual vc quer executar o debug - executar passo a passo; 
-        //debug executa passo a passo - F10;
+        
+        Console.Write("digite um numero: ");
+        double x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
 
-        Console.WriteLine("Digite 03 numeros: ");
-        int n1 = int.Parse(Console.ReadLine());
-        int n2 = int.Parse(Console.ReadLine());
-        int n3 = int.Parse(Console.ReadLine());//apertar a tecla F9 - break Point
-
-
-        double resultado = maior(n1, n2, n3);
-
-        Console.WriteLine("Maior = " + resultado);
-
-    }
-    //outra função, outro escopo; 
-    static int maior(int a, int b, int c)
-    {
-        int m;
-        if (a > b && a > c)
+        while (x >= 0.0)
         {
-            m = a;
-        }
-        else if (b > c)
-        {
-            m = b;
-        }
-        else
-        {
-            m = c;
-        }
-        return m;
 
+            double raiz = Math.Sqrt(x);
+            Console.WriteLine(raiz.ToString("F3", CultureInfo.InvariantCulture));
+            Console.WriteLine("digite outro numero ");
+            x = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+        }
+
+        Console.WriteLine("numero negativo");
 
     }
 }
